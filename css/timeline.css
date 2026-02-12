@@ -1,0 +1,324 @@
+/* Timeline Styles */
+
+.experience {
+    position: relative;
+    overflow: visible;
+    /* Was hidden, changed to visible for hover effects */
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Vertical Line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color), var(--accent-color));
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.5;
+    /* Fade out non-active items slightly */
+    filter: blur(2px);
+    /* Blur non-active items */
+}
+
+.timeline-item.active-focus {
+    transform: scale(1.1);
+    /* Zoom in */
+    opacity: 1;
+    filter: blur(0);
+    z-index: 20;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Dots on the line */
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 0 10px #fff, 0 0 20px var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.timeline-dot.present {
+    width: 25px;
+    height: 25px;
+    background: var(--secondary-color);
+    box-shadow: 0 0 15px var(--secondary-color), 0 0 30px var(--secondary-color);
+    animation: pulse 2s infinite;
+}
+
+.timeline-dot.start {
+    background: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: translateX(-50%) scale(1.3);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 240, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 240, 255, 0);
+    }
+}
+
+/* Date Labels */
+.timeline-date {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+    font-weight: bold;
+    color: var(--secondary-color);
+    z-index: 5;
+}
+
+/* Content Cards */
+.timeline-content {
+    width: 45%;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: auto;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    text-align: left;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(112, 0, 255, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.timeline-text h3 {
+    color: #fff;
+    margin-bottom: 0.2rem;
+    text-align: center;
+    /* Center-align title */
+}
+
+.timeline-text h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    /* Center-align subtitle */
+}
+
+.timeline-text p {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.5;
+    text-align: center;
+    /* Force center alignment as requested */
+    text-align-last: center;
+}
+
+/* Images in Timeline - Grid System */
+.timeline-image-grid {
+    width: 45%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    /* Space between images */
+    perspective: 1000px;
+}
+
+.grid-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    opacity: 0.6;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect ONLY when timeline item is active/focused */
+.timeline-item.active-focus .grid-img:hover {
+    transform: scale(1.6) translateZ(20px);
+    opacity: 1;
+    z-index: 100;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    border-color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-dot {
+        left: 20px;
+    }
+
+    .timeline-date {
+        left: 60px;
+        top: -25px;
+        transform: none;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 3rem;
+    }
+
+    .timeline-content,
+    .timeline-item:nth-child(odd) .timeline-content {
+        width: calc(100% - 50px);
+        margin-left: auto;
+        margin-right: 0;
+        text-align: left;
+        flex-direction: row;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-text {
+        text-align: left;
+    }
+}
+
+/* --- RTL Support for Timeline --- */
+
+[dir="rtl"] .timeline-container {
+    /* Ensure container is centered */
+}
+
+/* RTL LOGIC FOR TIMELINE (Mirror Layout) */
+
+/* Override centering for RTL */
+[dir="rtl"] .timeline-item {
+    justify-content: flex-start;
+}
+
+/* ODD items (Standard RTL flow: Right -> Left). Start is Right. */
+/* Content sits on Right. */
+[dir="rtl"] .timeline-item:nth-child(odd) .timeline-content {
+    margin: 0;
+    /* Reset margins */
+    text-align: left;
+    /* Align text to center (Left) */
+    flex-direction: row;
+    border-right: none;
+    border-left: 2px solid var(--secondary-color);
+}
+
+/* EVEN items (Reverse RTL flow: Left -> Right). Start is Left. */
+/* Content sits on Left. */
+[dir="rtl"] .timeline-item:nth-child(even) .timeline-content {
+    margin: 0;
+    /* Reset margins */
+    text-align: right;
+    /* Align text to center (Right) */
+    flex-direction: row-reverse;
+}
+
+/* Fix Date labels */
+[dir="rtl"] .timeline-date {
+    direction: ltr;
+    /* Keep 2018 - 2019 ltr */
+}
+
+/* Fix Text content direction */
+[dir="rtl"] .timeline-text h3,
+[dir="rtl"] .timeline-text h4,
+[dir="rtl"] .timeline-text p {
+    /* text-align is handled by the parent containers above */
+}
+
+/* Responsive RTL */
+@media screen and (max-width: 768px) {
+
+
+    [dir="rtl"] .timeline-line {
+        left: auto;
+        right: 20px;
+    }
+
+    [dir="rtl"] .timeline-dot {
+        left: auto;
+        right: 20px;
+        transform: translateX(50%);
+    }
+
+    [dir="rtl"] .timeline-date {
+        left: auto;
+        right: 60px;
+        transform: none;
+    }
+
+    [dir="rtl"] .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 20px;
+        margin-left: 0;
+    }
+
+    [dir="rtl"] .timeline-item:nth-child(odd) .timeline-content,
+    [dir="rtl"] .timeline-item:nth-child(even) .timeline-content {
+        order: 1;
+        /* Reset order */
+        width: 100%;
+        text-align: right;
+        border: none;
+        /* Remove desktop border */
+    }
+}

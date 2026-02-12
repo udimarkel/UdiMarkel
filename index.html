@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Creative Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
+
+    <header class="glass-header">
+        <nav>
+            <div class="logo">Udi<span class="highlight">Markel</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+                <li class="lang-toggle-container">
+                    <button id="lang-toggle" class="lang-btn">EN</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="section hero">
+            <div class="hero-content">
+                <h1 class="glitch-text" data-text-en="Industrial Engineer & Management"
+                    data-text-he="מהנדס תעשייה וניהול">
+                    <span class="lang-en">Industrial Engineer & Management</span>
+                    <span class="lang-he" style="display:none;">מהנדס תעשייה וניהול</span>
+                </h1>
+                <p class="subtitle">
+                    <span class="lang-en"><span class="highlight">Specialist in Information Systems.</span> With a
+                        passion for creating clear, efficient, and user-friendly digital workflows and products.</span>
+                    <span class="lang-he" style="display:none;"><span class="highlight">מתמחה במערכות מידע.</span> עם
+                        זיקה ליצירת תהליכים ומוצרים דיגיטליים ברורים, יעילים ונוחים לשימוש.</span>
+                </p>
+                <div class="cta-buttons">
+                    <a href="#experience" class="btn primary">
+                        <span class="lang-en">My Journey</span>
+                        <span class="lang-he" style="display:none;">המסע שלי</span>
+                    </a>
+                    <a href="#contact" class="btn secondary">
+                        <span class="lang-en">Get in Touch</span>
+                        <span class="lang-he" style="display:none;">צור קשר</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Abstract 3D shape or interaction here -->
+                <div class="image-grid-container floating" style="display: none;">
+                    <div class="image-grid">
+                        <div class="grid-item grid-item-1"><img src="images/grid/yanshuf_project.png"
+                                alt="Yanshuf Project"></div>
+                        <div class="grid-item grid-item-2"><img
+                                src="images/grid/WhatsApp Image 2026-02-10 at 22.02.40.jpeg" alt="Grid Image 2"></div>
+                        <div class="grid-item grid-item-3"><img
+                                src="images/grid/WhatsApp Image 2026-02-10 at 22.40.00.jpeg" alt="Grid Image 3"></div>
+                        <div class="grid-item grid-item-4"><img
+                                src="images/grid/WhatsApp Image 2026-02-10 at 22.41.17.jpeg" alt="Grid Image 4"></div>
+                        <div class="grid-item grid-item-5"><img
+                                src="images/grid/WhatsApp Image 2026-02-10 at 22.49.06.jpeg" alt="Grid Image 5"></div>
+                        <div class="grid-item grid-item-6"><img
+                                src="images/grid/Gemini_Generated_Image_y0ppl6y0ppl6y0pp (1).png" alt="Grid Image 6">
+                        </div>
+                        <div class="grid-item grid-item-7"><img src="images/grid/Screenshot 2025-12-17 155433 (1).png"
+                                alt="Grid Image 7"></div>
+                        <div class="grid-item grid-item-8"><img
+                                src="images/grid/WhatsApp Image 2026-02-10 at 22.02.40.jpeg" alt="Grid Image 8"></div>
+                        <div class="grid-item grid-item-9"><img
+                                src="images/grid/WhatsApp Image 2026-02-10 at 22.11.49.jpeg" alt="Grid Image 9"></div>
+                        <!-- Only 9 unique images found, repeating the first one for the 10th slot to maintain layout -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container">
+                <div class="profile-image-container">
+                    <img src="images/WhatsApp Image 2026-02-10 at 22.11.49.jpeg" alt="Profile Picture"
+                        id="profile-upload-zone">
+                </div>
+                <div class="about-text">
+                    <h3>
+                        <span class="lang-en">Hey, I'm <span class="highlight">Udi</span></span>
+                        <span class="lang-he" style="display:none;">היי, אני <span class="highlight">אודי</span></span>
+                    </h3>
+                    <div class="lang-en">
+                        <p>Industrial Engineer specializing in Information Systems, with a strong connection to the
+                            world of creation. I love watching projects slowly come to life - creating smooth and
+                            continuous workflows, building products and systems that work. I have great appreciation for
+                            high-quality products, and that's how I try to deliver the projects under my responsibility.
+                            Aesthetics, efficiency, and usability matter to me - when these come together right,
+                            something special is created.</p>
+                    </div>
+                    <div class="lang-he" style="display:none;">
+                        <p>מהנדס תעשייה וניהול בהתמחות מערכות מידע, עם חיבור חזק לעולמות היצירה. אני אוהב לראות איך
+                            פרויקטים לאט לאט נוצרים - ליצור תהליכים נוחים ורציפים, לבנות מוצרים ומערכות שעובדים. יש לי
+                            הערכה רבה למוצרים איכותיים ברמה גבוהה, וכך אני מנסה להוציא את הפרויקטים שרצים תחתי. חשובים
+                            לי אסתטיקה, יעילות ונוחות - כשאלה משתלבים נכון, נוצר משהו מיוחד.</p>
+                    </div>
+
+                    <div class="skills-grid">
+                        <div class="skill-tag">Excel</div>
+                        <div class="skill-tag">SQL</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">MS Project</div>
+                        <div class="skill-tag">ClickUp</div>
+                        <div class="skill-tag">Miro</div>
+                        <div class="skill-tag">Figma</div>
+                        <div class="skill-tag">HTML & CSS</div>
+                        <div class="skill-tag">JavaScript</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section experience">
+            <h2 class="section-title">My Journey</h2>
+            <div class="timeline-container">
+                <!-- Line -->
+                <div class="timeline-line"></div>
+
+                <!-- Item 1: Lightico -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="lang-en">2025 - Present</span>
+                        <span class="lang-he" style="display:none;">2025 - היום</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-text">
+                            <h3>
+                                <span class="lang-en">Lightico</span>
+                                <span class="lang-he" style="display:none;">Lightico</span>
+                            </h3>
+                            <h4>
+                                <span class="lang-en">Technical Solutions Engineer</span>
+                                <span class="lang-he" style="display:none;">מהנדס פתרונות טכניים</span>
+                            </h4>
+                            <div class="lang-en">
+                                <p>I guide companies through their transition to our platform. I translate between what
+                                    the client needs and what the system can do, building workflows and helping them
+                                    extract real value from the technology.</p>
+                            </div>
+                            <div class="lang-he" style="display:none;">
+                                <p>מלווה חברות בתהליך המעבר לפלטפורמה שלנו. אני מתרגם בין מה שהלקוח צריך לבין מה שהמערכת
+                                    יכולה לעשות, בונה תהליכים ועוזר להם להפיק ערך אמיתי מהטכנולוגיה.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Eventact -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="lang-en">2025 - Present</span>
+                        <span class="lang-he" style="display:none;">2025 - היום</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-text">
+                            <h3>
+                                <span class="lang-en">Eventact - Final Project</span>
+                                <span class="lang-he" style="display:none;">Eventact – פרויקט גמר</span>
+                            </h3>
+                            <h4>
+                                <span class="lang-en">Project Lead / Developer</span>
+                                <span class="lang-he" style="display:none;">פיתוח המערכת</span>
+                            </h4>
+                            <div class="lang-en">
+                                <p>Developing a crew management system for events in collaboration with Eventact. We
+                                    looked for a product to complement their existing system – defining needs, user
+                                    research, conversations with potential clients, and interface design. We're
+                                    currently in the development phase of the system.</p>
+                            </div>
+                            <div class="lang-he" style="display:none;">
+                                <p>מפתח מערכת לניהול צוותים באירועים בשיתוף פעולה עם חברת Eventact. חיפשנו מוצר שישלים
+                                    את המערכת הקיימת שלהם – אפיון צרכים, חקר משתמשים, שיחות עם לקוחות פוטנציאליים ועיצוב
+                                    הממשק. כיום אנחנו בשלב פיתוח המערכת.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item 3: Volunteering -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="lang-en">2024 - Present</span>
+                        <span class="lang-he" style="display:none;">2024 - היום</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-text">
+                            <h3>
+                                <span class="lang-en">Volunteering – Tapuach Association</span>
+                                <span class="lang-he" style="display:none;">התנדבות – עמותת תפוח</span>
+                            </h3>
+                            <h4>
+                                <span class="lang-en">Tech Mentor</span>
+                                <span class="lang-he" style="display:none;">מנטור טכנולוגי</span>
+                            </h4>
+                            <div class="lang-en">
+                                <p>As part of my volunteer work, I help elderly people deal with technology. Once a week
+                                    I join the call center and provide personal support for various requests – from
+                                    everyday apps to computer software.</p>
+                            </div>
+                            <div class="lang-he" style="display:none;">
+                                <p>במסגרת ההתנדבות אני מסייע לאנשים בגיל השלישי בהתמודדות עם טכנולוגיה. פעם בשבוע אני
+                                    מצטרף למוקד ונותן מענה אישי לפניות שונות – מאפליקציות יומיומיות ועד שימוש בתוכנות
+                                    מחשב.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item 4: Yanshuf -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="lang-en">2020 - 2022</span>
+                        <span class="lang-he" style="display:none;">2020 - 2022</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-text">
+                            <h3>
+                                <span class="lang-en">Yanshuf Wood Work</span>
+                                <span class="lang-he" style="display:none;">Yanshuf Wood Work</span>
+                            </h3>
+                            <h4>
+                                <span class="lang-en">Team Lead & Project Manager</span>
+                                <span class="lang-he" style="display:none;">ראש צוות ומנהל פרויקטים</span>
+                            </h4>
+                            <div class="lang-en">
+                                <p>I managed custom woodworking projects of various sizes. From planning and managing
+                                    timelines and equipment, to hands-on work and execution on-site as part of a
+                                    professional team.</p>
+                            </div>
+                            <div class="lang-he" style="display:none;">
+                                <p>ניהלתי פרויקטים של נגרות מותאמת אישית בגדלים שונים. מהתכנון וניהול זמנים וציוד, ועד
+                                    עבודה וביצוע בשטח כחלק מצוות מקצועי.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item: Jerusalem Wood Center -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="lang-en">2018 - 2019</span>
+                        <span class="lang-he" style="display:none;">2018 - 2019</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-text">
+                            <h3>
+                                <span class="lang-en">Jerusalem Wood Center</span>
+                                <span class="lang-he" style="display:none;">מרכז העץ הירושלמי</span>
+                            </h3>
+                            <h4>
+                                <span class="lang-en">Warehouse & Sales</span>
+                                <span class="lang-he" style="display:none;">מחסן ומכירות</span>
+                            </h4>
+                            <div class="lang-en">
+                                <p>I worked in inventory management, supply, and order processing. I was responsible for
+                                    sales, customer service, and direct communication with suppliers to ensure timely
+                                    delivery and quality standards.</p>
+                            </div>
+                            <div class="lang-he" style="display:none;">
+                                <p>עבדתי בניהול מלאי, אספקה ועיבוד הזמנות. הייתי אחראי על מכירות, שירות לקוחות וקשר ישיר
+                                    עם ספקים לוודא אספקה במועד ובאיכות הנדרשת.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item 5: Military -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="lang-en">2015 - 2018</span>
+                        <span class="lang-he" style="display:none;">2015 - 2018</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-text">
+                            <h3>
+                                <span class="lang-en">Military Service</span>
+                                <span class="lang-he" style="display:none;">שירות צבאי – סיירת גולני</span>
+                            </h3>
+                            <h4>
+                                <span class="lang-en">Golani Reconnaissance</span>
+                                <span class="lang-he" style="display:none;">מפקד צוות</span>
+                            </h4>
+                            <div class="lang-en">
+                                <p>During my service, I led a team of fighters from their recruitment day, through
+                                    training and ongoing operations, to participation in missions. I worked closely with
+                                    the team and other commanders, coordinating tasks and operating in a dynamic and
+                                    changing environment.</p>
+                            </div>
+                            <div class="lang-he" style="display:none;">
+                                <p>במהלך השירות הובלתי צוות לוחמים מיום גיוסם, דרך ההכשרה והפעילות השוטפת, ועד השתתפות
+                                    במבצעים. עבדתי בצמידות עם הצוות ועם מפקדים נוספים, תוך תיאום משימות והתנהלות בסביבה
+                                    דינמית ומשתנה.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item 6: Service Year -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="lang-en">2014 - 2015</span>
+                        <span class="lang-he" style="display:none;">2014 - 2015</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-text">
+                            <h3>
+                                <span class="lang-en">National Service Year</span>
+                                <span class="lang-he" style="display:none;">שנת שירות – כפר הנוער עיינות</span>
+                            </h3>
+                            <h4>
+                                <span class="lang-en">Ayanot Youth Village</span>
+                                <span class="lang-he" style="display:none;">מדריך נוער</span>
+                            </h4>
+                            <div class="lang-en">
+                                <p>I was a youth counselor at an agricultural village. I handled maintenance and
+                                    renovation work, led hands-on projects with the students, and simultaneously
+                                    mentored them in their daily life and routine at the village.</p>
+                            </div>
+                            <div class="lang-he" style="display:none;">
+                                <p>הייתי מדריך בני נוער בכפר חקלאי. עסקתי בעבודות תחזוקה ושיפוצים, הובלתי פרויקטים
+                                    מעשיים עם החניכים, ובמקביל ליוויתי אותם ביומיום ובשגרה של הכפר.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item 7: Amal Emek Harod (High School) -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="lang-en">2008 - 2014</span>
+                        <span class="lang-he" style="display:none;">2008 - 2014</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-text">
+                            <h3>
+                                <span class="lang-en">Amal Emek Harod - High School</span>
+                                <span class="lang-he" style="display:none;">עמל עמק חרוד – תיכון</span>
+                            </h3>
+                            <h4>
+                                <span class="lang-en">Mechatronics Major</span>
+                                <span class="lang-he" style="display:none;">מגמת מכטרוניקה</span>
+                            </h4>
+                            <div class="lang-en">
+                                <p>I attended Amal Emek Harod regional high school, where I studied 10 units of
+                                    Mechatronics. This education still contributes to my understanding of logic, work
+                                    processes, and the connection between idea and execution.</p>
+                            </div>
+                            <div class="lang-he" style="display:none;">
+                                <p>את התיכון העברתי בבית הספר האזורי עמל עמק חרוד, שם למדתי 10 יחידות מכטרוניקה.
+                                    הלימודים תרמו לי עד היום בהבנת לוגיקה, תהליכי עבודה, והקשר בין רעיון למימוש.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item 8: Ein Harod Meuhad (Growing Up) -->
+                <div class="timeline-item">
+                    <div class="timeline-dot start"></div>
+                    <div class="timeline-date">
+                        <span class="lang-en">1996</span>
+                        <span class="lang-he" style="display:none;">1996</span>
+                    </div>
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-text">
+                            <h3>
+                                <span class="lang-en">Ein Harod Meuhad - Growing Up</span>
+                                <span class="lang-he" style="display:none;">עין חרוד מאוחד</span>
+                            </h3>
+                            <h4>
+                                <span class="lang-en">&nbsp;</span>
+                                <span class="lang-he" style="display:none;">&nbsp;</span>
+                            </h4>
+
+                            <div class="lang-en">
+                                <p>I was born and raised in Kibbutz Ein Harod Meuhad. I was a curious and mischievous
+                                    kid who loved being outdoors, hiking, and hanging out with friends. Together we'd
+                                    build vehicles from old scrap parts and travel around the country. Meanwhile, I
+                                    worked at the kibbutz apiary, which gave me a strong work ethic from a young age.
+                                </p>
+                            </div>
+                            <div class="lang-he" style="display:none;">
+                                <p>נולדתי וגדלתי בקיבוץ עין חרוד מאוחד. הייתי ילד סקרן ושובב שאהב להיות בחוץ, לטייל
+                                    ולהיות עם חברים. ביחד היינו בונים כלי רכב מגרוטאות ישנות ומטיילים בכל הארץ. במקביל,
+                                    עבדתי במכוורת של הקיבוץ שנתן לי מוסר עבודה מגיל צעיר.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section portfolio" style="display: none;">
+            <h2 class="section-title">Selected Work</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card glass-card">
+                    <div class="project-image"></div>
+                    <div class="project-info">
+                        <h3>
+                            <span class="lang-en">Project One</span>
+                            <span class="lang-he" style="display:none;">פרויקט ראשון</span>
+                        </h3>
+                        <p>
+                            <span class="lang-en">A futuristic dashboard with real-time data visualization.</span>
+                            <span class="lang-he" style="display:none;">דשבורד עתידני עם ויזואליזציית נתונים בזמן
+                                אמת.</span>
+                        </p>
+                        <a href="#" class="link-arrow">
+                            <span class="lang-en">View Case Study &rarr;</span>
+                            <span class="lang-he" style="display:none;">צפה במקרה בוחן &larr;</span>
+                        </a>
+                    </div>
+                </article>
+                <!-- Project 2 -->
+                <article class="project-card glass-card">
+                    <div class="project-image"></div>
+                    <div class="project-info">
+                        <h3>
+                            <span class="lang-en">Project Two</span>
+                            <span class="lang-he" style="display:none;">פרויקט שני</span>
+                        </h3>
+                        <p>
+                            <span class="lang-en">E-commerce platform with seamless animations.</span>
+                            <span class="lang-he" style="display:none;">פלטפורמת מסחר אלקטרוני עם אנימציות חלקות.</span>
+                        </p>
+                        <a href="#" class="link-arrow">
+                            <span class="lang-en">View Case Study &rarr;</span>
+                            <span class="lang-he" style="display:none;">צפה במקרה בוחן &larr;</span>
+                        </a>
+                    </div>
+                </article>
+                <!-- Project 3 -->
+                <article class="project-card glass-card">
+                    <div class="project-image"></div>
+                    <div class="project-info">
+                        <h3>
+                            <span class="lang-en">Project Three</span>
+                            <span class="lang-he" style="display:none;">פרויקט שלישי</span>
+                        </h3>
+                        <p>
+                            <span class="lang-en">Interactive storytelling experience for a brand.</span>
+                            <span class="lang-he" style="display:none;">חווית סיפור אינטראקטיבית למותג.</span>
+                        </p>
+                        <a href="#" class="link-arrow">
+                            <span class="lang-en">View Case Study &rarr;</span>
+                            <span class="lang-he" style="display:none;">צפה במקרה בוחן &larr;</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+
+        <section id="contact" class="section contact">
+            <h2 class="section-title">Let's Talk</h2>
+            <form class="contact-form glass-card" action="https://formsubmit.co/udimarkel4@gmail.com" method="POST">
+                <!-- Optional: Honey Pot to prevent spam -->
+                <input type="text" name="_honey" style="display:none">
+                <!-- Optional: Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-group">
+                    <label for="name">
+                        <span class="lang-en">Name</span>
+                        <span class="lang-he" style="display:none;">שם</span>
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                        <span class="lang-en">Email</span>
+                        <span class="lang-he" style="display:none;">אימייל</span>
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">
+                        <span class="lang-en">Message</span>
+                        <span class="lang-he" style="display:none;">הודעה</span>
+                    </label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn primary full-width">
+                    <span class="lang-en">Send Message</span>
+                    <span class="lang-he" style="display:none;">שלח הודעה</span>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
