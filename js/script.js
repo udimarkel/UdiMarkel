@@ -202,4 +202,64 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize
     updateLanguage(currentLang);
 
+    // --- Contact Form AJAX Submission ---
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default redirection
+
+            const formData = new FormData(contactForm);
+
+            // Disable button to prevent double submit
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = currentLang === 'he' ? 'שולח...' : 'Sending...';
+
+            fetch(contactForm.getAttribute('action'), {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Success
+                        formMessage.textContent = currentLang === 'he' ? 'הטופס נשלח בהצלחה' : 'Message sent successfully';
+                        formMessage.className = 'form-message success';
+                        contactForm.reset(); // Clear form fields
+                    } else {
+                        // Error from server
+                        return response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                throw new Error(data.errors.map(error => error.message).join(", "));
+                            } else {
+                                throw new Error('Form submission failed');
+                            }
+                        });
+                    }
+                })
+                .catch(error => {
+                    // Network or other error
+                    formMessage.textContent = currentLang === 'he' ? 'שגיאה בשליחת הטופס. אנא נסה שוב.' : 'Error sending message. Please try again.';
+                    formMessage.className = 'form-message error';
+                    console.error('Form Error:', error);
+                })
+                .finally(() => {
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+
+                    // Clear message after 5 seconds
+                    setTimeout(() => {
+                        formMessage.textContent = '';
+                        formMessage.className = 'form-message';
+                    }, 5000);
+                });
+        });
+    }
+
 });

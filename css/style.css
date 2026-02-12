@@ -775,3 +775,22 @@ footer {
         max-height: 400px;
     }
 }
+
+/* Form Message Styles */
+.form-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    min-height: 1.5rem;
+}
+
+.form-message.success {
+    color: #00ff88;
+    /* Green for success */
+}
+
+.form-message.error {
+    color: #ff3333;
+    /* Red for error */
+}
